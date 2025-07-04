@@ -1,0 +1,36 @@
+{
+    "name": "dtg-dmg-2025/coding-test",
+    "description": "A custom plugin implementing functionality for the DMG coding test",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Dave Green",
+            "email": "mr.david.thomas.green@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "automattic/vipwpcs": "^3.0",
+        "phpstan/phpstan": "^2.1",
+        "php-stubs/wordpress-stubs": "^6.8",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "phpstan/extension-installer": "^1.4",
+        "php-stubs/wp-cli-stubs": "^2.12"
+    },
+	"scripts": {
+		"phpstan": "vendor/bin/phpstan analyse -c  phpstan.neon --memory-limit=2G",
+		"phpcs": "vendor/bin/phpcs",
+		"phpcbf": "vendor/bin/phpcbf"
+	},
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        },
+		"optimize-autoloader": true
+    },
+	"autoload-dev": {
+		"files": ["vendor/wp-cli/wp-cli/php/class-wp-cli.php"]
+	}
+}

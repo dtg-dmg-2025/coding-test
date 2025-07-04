@@ -1,0 +1,32 @@
+{
+  "name": "coding-test",
+  "version": "0.0.1",
+  "description": "A custom plugin implementing functionality for the DMG coding test",
+  "author": "Dave Green",
+  "license": "GPL-2.0-or-later",
+  "main": "./build/read-more-dmg/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint": "wp-scripts lint-js && wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style",
+    "format": "wp-scripts format-js && wp-scripts format-css",
+    "format:js": "wp-scripts format-js",
+    "format:css": "wp-scripts format-css",
+    "type-check": "wp-scripts type-check",
+    "update": "wp-scripts packages-update",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@wordpress/browserslist-config": "^6.26.0",
+    "@wordpress/eslint-plugin": "^22.12.0",
+    "@wordpress/icons": "^10.26.0",
+    "@wordpress/stylelint-config": "^23.18.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.1.2"
+  },
+  "lint-staged": {
+	"*.php": "vendor/bin/phpstan analyse"
+  }
+}

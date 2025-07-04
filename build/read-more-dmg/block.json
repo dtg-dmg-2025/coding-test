@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "coding-test/read-more-dmg",
+  "version": "0.1.0",
+  "title": "Read More (DMG)",
+  "category": "widgets",
+  "icon": "visibility",
+  "description": "Inserts a read more link to a post/page: search by keyword or post ID.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {},
+  "textdomain": "read-more-dmg",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
